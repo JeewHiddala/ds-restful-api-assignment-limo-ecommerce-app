@@ -1,21 +1,6 @@
-import bcrypt from 'bcryptjs';
+
     const data={
-      users:[
-        {
-          name:'admin',
-          email:'admin@yahoo.com',
-          password: bcrypt.hashSync('1234', 8),
-          isAdmin: true,
-        },
 
-        {
-          name:'John',
-          email:'user@yahoo.com',
-          password: bcrypt.hashSync('1234', 8),
-          isAdmin: false,
-        },
-
-      ],
     products: [
       {
         _id: '1',
@@ -42,7 +27,7 @@ import bcrypt from 'bcryptjs';
       },
       {
         _id: '3',
-        name: 'Slim Shirt',
+        name: 'Slim Shirt1',
         category: 'Shirts',
         image: '/images/p3.jpg',
         price: 60,countInstock: 0,
@@ -53,7 +38,7 @@ import bcrypt from 'bcryptjs';
       },
       {
         _id: '4',
-        name: 'Slim Shirt',
+        name: 'Slim Shirt2',
         category: 'Shirts',
         image: '/images/p4.jpg',
         price: 60,countInstock: 15,
@@ -64,7 +49,7 @@ import bcrypt from 'bcryptjs';
       },
       {
         _id: '5',
-        name: 'Slim Shirt',
+        name: 'Slim Shirt3',
         category: 'Shirts',
         image: '/images/p5.jpg',
         price: 60,countInstock: 30,
@@ -75,7 +60,7 @@ import bcrypt from 'bcryptjs';
       },
       {
         _id: '6',
-        name: 'Slim Shirt',
+        name: 'Slim Shirt4',
         category: 'Shirts',
         image: '/images/p6.jpg',
         price: 60,countInstock: 5,

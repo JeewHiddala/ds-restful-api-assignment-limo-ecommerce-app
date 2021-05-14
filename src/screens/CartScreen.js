@@ -61,7 +61,7 @@ const checkoutHandler = () => {
                                          addToCart(item.product, Number(e.target.value))
                                          
                                      ) }>
-
+                                    
                                         {[...Array(item.countInstock).keys()].map(x =>(
                                         <option key={x + 1} value={x + 1}>{x + 1}</option>
                                         ))}       
