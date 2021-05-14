@@ -18,4 +18,4 @@ export const cartReducer = (state = {cartItem:[]}, action) =>{
         default: 
             return state;    
     }
-}
+};
