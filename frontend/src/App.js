@@ -13,7 +13,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
 import ProfileScreen from './screens/ProfileScreen';
-
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   
@@ -74,7 +74,10 @@ const signoutHandler = () => {
         <Route path="/placeorder" component={PlaceOrderScreen}></Route>
         <Route path="/order/:id" component={OrderScreen}></Route>
         <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
-        <Route path="/profile" component={ProfileScreen}></Route>
+        <PrivateRoute
+            path="/profile"
+            component={ProfileScreen}
+          ></PrivateRoute>
     </main>
     <footer className="row center">
         All right reserved.
