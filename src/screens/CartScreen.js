@@ -62,7 +62,7 @@ const checkoutHandler = () => {
                                          
                                      ) }>
                                     
-                                        {[...Array(item.countInstock).keys()].map(x =>(
+                                        {[...Array(item.countInStock).keys()].map((x) =>(
                                         <option key={x + 1} value={x + 1}>{x + 1}</option>
                                         ))}       
                                      </select>
