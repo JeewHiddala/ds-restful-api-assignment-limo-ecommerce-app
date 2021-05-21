@@ -16,6 +16,7 @@ import SigninScreen from './screens/SigninScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import PrivateRoute from './components/PrivateRoute';
 import ProductListScreen from './screens/ProductListScreen';
+import ProductEditScreen from './screens/ProductEditScreen';
 
 function App() {
   
@@ -105,6 +106,11 @@ const signoutHandler = () => {
             path="/productlist"
             component={ProductListScreen}
           ></AdminRoute>
+          <Route
+            path="/product/:id/edit"
+            component={ProductEditScreen}
+            exact
+          ></Route>
     </main>
     <footer className="row center">
         All right reserved.
