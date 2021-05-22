@@ -6,6 +6,7 @@ import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
+import cors from 'cors';
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/limo', {
   useCreateIndex: true,
 });
 
+app.use(cors());
 app.use('/api/users', userRouter);
 app.use('/api/products',productRouter);
 app.use('/api/orders', orderRouter);
