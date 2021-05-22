@@ -35,7 +35,7 @@ const signoutHandler = () => {
     <div className="grid-container">
     <header className="row">
         <div>
-            <Link className="shopName" to="/">Limo</Link>
+            <Link className="shopName" to="/">Limo Computers</Link>
         </div>
         <div>
             <Link to="/cart">Cart
