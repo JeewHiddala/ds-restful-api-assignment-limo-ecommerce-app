@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveShippingAddress } from '../actions/cartActions';
-import CheckoutSteps from '../components/CheckoutSteps';
+import Checkouts from '../components/Checkouts';
+
 
 export default function ShippingAddressScreen(props) {
   const userSignin = useSelector((state) => state.userSignin);
@@ -26,7 +27,7 @@ export default function ShippingAddressScreen(props) {
   };
   return (
     <div>
-      <CheckoutSteps step1 step2></CheckoutSteps>
+      <Checkouts step1 step2></Checkouts>
       <form className="form" onSubmit={submitHandler}>
         <div>
           <h1>Shipping Address</h1>
