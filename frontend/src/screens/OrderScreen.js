@@ -5,10 +5,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+
 import { detailsOrder, deliverOrder, payOrder } from '../actions/orderActions';
 import { ORDER_DELIVER_RESET, ORDER_PAY_RESET } from '../constants/orderConstants';
 
 export default function OrderScreen(props) {
+
   const orderId = props.match.params.id;
   const [sdkReady, setSdkReady] = useState(false);
   const orderDetails = useSelector((state) => state.orderDetails);
@@ -104,19 +106,21 @@ export default function OrderScreen(props) {
               </div>
             </li>
             <li>
-              <div className="card card-body">
-                <h2>Payment</h2>
-                <p>
-                  <strong>Method:</strong> {order.paymentMethod}
-                </p>
-                {order.isPaid ? (
-                  <MessageBox variant="success">
-                    Paid at {order.paidAt}
-                  </MessageBox>
-                ) : (
-                  <MessageBox variant="danger">Not Paid</MessageBox>
-                )}
-              </div>
+
+                <div className="card card-body">
+                  <h2>Payment</h2>
+                  <p>
+                    <strong>Method:</strong> {order.paymentMethod}
+                  </p>
+                  {order.isPaid ? (
+                    <MessageBox variant="success">
+                      Paid at {order.paidAt}
+                    </MessageBox>
+                  ) : (
+                    <MessageBox variant="danger">Not Paid</MessageBox>
+                  )}
+                </div>
+
             </li>
             <li>
               <div className="card card-body">
